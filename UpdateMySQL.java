@@ -47,7 +47,7 @@ public class UpdateMySQL {
                 } else if (resp == 2) {
                     System.out.println("Digite a nova senha: ");
                     novaSenha = alteracoes.nextLine();
-                    String stmSqlUpdate = "UPDATE `mysql_connector`.`tbl_login` SET `senha` = '" + novaSenha + "' WHERE (`senha` = '" + strSenha + "')";
+                    String stmSqlUpdate = "UPDATE `mysql_connector`.`tbl_login` SET `senha` = '" + novaSenha + "' WHERE (`login` = '" + strLogin + "')";
                     PreparedStatement preparedStm = conn.prepareStatement(stmSqlUpdate);
                     preparedStm.executeUpdate();
                     System.out.println("Senha alterada com sucesso para " + "[" + novaSenha + "]");
